@@ -16,7 +16,7 @@
 	},
 	"content_scripts": [
 	{
-		"matches": ["http://forum.xitek.com/*.html"],
+		"matches": ["http://forum.xitek.com/thread*.html"],
 		"js": ["lib/jquery-1.8.3.min.js","scripts/main.js"],
 		"run_at": "document_idle"
 	}

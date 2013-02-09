@@ -1,30 +1,31 @@
 // SAMPLE
 this.manifest = {
-    "name": "LADAOBA",
+    "name": "My Extension",
     "icon": "icon.png",
     "settings": [
         {
-            "tab": i18n.get("年份过滤"),
-            "group": i18n.get("之后注册不显示"),
-            "name": "year",
+            "tab": i18n.get("information"),
+            "group": i18n.get("login"),
+            "name": "username",
             "type": "text",
-            "label": i18n.get("年份"),
-            "text": i18n.get("2011")
+            "label": i18n.get("username"),
+            "text": i18n.get("x-characters")
         },
         {
-            "tab": i18n.get("黑名单"),
-            "group": i18n.get("拉黑"),
-            "name": "blacklist",
+            "tab": i18n.get("information"),
+            "group": i18n.get("login"),
+            "name": "password",
             "type": "text",
-            "label": i18n.get("黑名单"),
-            "text": i18n.get("用户名之间用空格分隔")
+            "label": i18n.get("password"),
+            "text": i18n.get("x-characters-pw"),
+            "masked": true
         },
         {
-            "tab": i18n.get("白名单"),
-            "group": i18n.get("白名单"),
-            "name": "whitelist",
-            "type": "text",
-            "text": i18n.get("用户名之间用空格分隔")
+            "tab": i18n.get("information"),
+            "group": i18n.get("login"),
+            "name": "myDescription",
+            "type": "description",
+            "text": i18n.get("description")
         },
         {
             "tab": i18n.get("information"),

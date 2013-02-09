@@ -1,8 +1,8 @@
 {
-	"name": "LADAOBA",
+	"name": "WNDWJ",
 	"version": "0.1",
 	"manifest_version" : 2,
-	"description": "LADAOBA",
+	"description": "WNDWJ",
 	"background" : {
 		"page" : "background.html"
 	},
@@ -12,7 +12,7 @@
 			"19": "icons/19.png",
 			"38": "icons/38.png"
 		},
-		"default_title" : "LADAOBA"
+		"default_title" : "WNDWJ"
 	},
 	"content_scripts": [
 	{

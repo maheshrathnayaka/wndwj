@@ -14,5 +14,10 @@ Todo：
 
 Installation
 ------------
+  - download and unzip
+
+![image](http://i.imgur.com/jFRI6M2.png)
+
+  - install
 
 ![image](http://i.imgur.com/QyeWxya.png)

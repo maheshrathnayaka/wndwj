@@ -1,23 +1,54 @@
+<!DOCTYPE html>
 <html>
-<head><title>wndwj</title></head>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="options.js"></script>
+</head>
 
 <body>
+    <div class="container">
+        <div id="content">
+            <form>
+                <fieldset>
+                    <legend>屏蔽方式配置</legend>
+                    <p><h5>根据注册时间来屏蔽:</h5></p>
+                <select id="regdate_select">
+                    <option value="-1">停用此屏蔽方式</option>
+                    <option value="7">注册未满7天</option>
+                    <option value="30">注册未满1个月</option>
+                    <option value="90">注册未满3个月</option>
+                    <option value="180">注册未满6个月</option>
+                    <option value="365">注册未满1年</option>
+                    <option value="730">注册未满2年</option>
+                </select>
+                <p><h5>按泡网分数屏蔽:</h5></p>
+                <select id="score_select">
+                    <option value="-1">停用此屏蔽方式</option>
+                    <option value="0.1">不足0.1分</option>
+                    <option value="0.3">不足0.3分</option>
+                    <option value="0.5">不足0.5分</option>
+                    <option value="1">不足1分</option>
+                    <option value="2">不足2分</option>
+                    <option value="3">不足3分</option>
+                    <option value="5">不足5分</option>
+                </select>
 
-Favorite Color:
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
-
-<p>屏蔽注册未满 <input type="text" name="month"> 月的用户</p>
-<p>黑名单（空格分隔）<textarea rows="20" cols="50"></textarea>
-<br>
-<div id="status"></div>
-<button id="save">Save</button>
+                <p><h5>黑名单：</h5></p>
+                <textarea id="blacklist" class="field span9" rows="15" placeholder="用户名之间用空格分隔"></textarea>
+                <p><button id="savebutton" class="btn btn-large btn-primary" type="button">保存配置</button></p>
+                </fieldset>
+            </form>
+        </div>
+        <div id="sounds">
+            <audio id="YeahBaby" src="AustinPowers-YeahBaby.mp3" preload="auto"></audio>
+        </div>
+    </div>
 </body>
-
-<script src="js/options.js"></script>
-
+            
 </html>
+
+

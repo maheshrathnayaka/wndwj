@@ -14,6 +14,23 @@ function default_option_setup() {
 
 default_option_setup();
 
+function unblockUser(name){
+    var blacklist = localStorage['blacklist'];
+    var index = blacklist.indexOf(name);
+    if (index != -1 ) {
+        blacklist.splice(index,1);
+    }
+    localStorage['blacklist'] = JSON.stringify(blacklist);
+}
+
+function blockUser(name){
+    var blacklist = localStorage['blacklist'];
+    var index = blacklist.indexOf(name);
+    if (index = -1) {
+        blacklist.push(name);
+    }
+    localStorage['blacklist'] = JSON.stringify(blacklist);
+}
 
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) { 
          chrome.pageAction.show(sender.tab.id);
@@ -24,10 +41,19 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
                 score: localStorage['score'],
                 blacklist: localStorage['blacklist']
             });
+        } 
+        else if (request.method == "unblock") {
+            unblockUser(request.username);
+            sendResponse({ok:true});
+        }
+        else if (request.method == "block") {
+            blockUser(request.username);
+            sendResponse({ok:true});
         }
         else {
             sendResponse({});
         }
 });
+
 
 

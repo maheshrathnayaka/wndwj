@@ -1,11 +1,11 @@
 
 var BG_PAGE = chrome.extension.getBackgroundPage();
 
-function play_sound(id) {
-    var element_id = id || 'YeahBaby';
-    var audio = document.getElementById(id);
-    audio.play();
-}
+/* function play_sound(id) { */
+    // var element_id = id || 'YeahBaby';
+    // var audio = document.getElementById(id);
+    // audio.play();
+/* } */
 
 
 function init_options_page() {
@@ -30,7 +30,14 @@ $(document).ready(function() {
         BG_PAGE.localStorage['score'] = $("#score_select option:selected").val();
         var userlist = $('textarea#blacklist').val().split(' ');
         BG_PAGE.localStorage['blacklist'] = JSON.stringify(userlist);
-        play_sound('YeahBaby');
+
+        // Update message of configuration saved.
+        var status = document.getElementById("savebutton");
+        status.innerHTML = "已保存...";
+        setTimeout(function() {
+                status.innerHTML = "保存配置";
+        }, 750);
+        //play_sound('YeahBaby');
     });
 });
 

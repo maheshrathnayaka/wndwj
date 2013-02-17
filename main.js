@@ -79,7 +79,8 @@ function wndwj_block() {
             set_user_by_pid(user);
             users.push(user);
 
-            $(this).find("em a#a_block").after(kick_bt);
+            // Todo: uncomment below will add kick_bt on page
+            //$(this).find("em a#a_block").after(kick_bt);
 
             if (check_blacklist(blacklist,user.name)) {
                 $(this).find("#kick").text("不拉黑");  
@@ -88,7 +89,7 @@ function wndwj_block() {
             }
 
             $(this).find("#kick").click(function(){ 
-                //Todo: ERRRRRROOOOR........
+                //Todo: something ERRRRRROOOOR........
                 if (check_blacklist(blacklist,user.name)) {
                     chrome.extension.sendRequest({method: 'unblock',username: user.name}, function(response){
                     });

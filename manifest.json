@@ -22,7 +22,7 @@
         "default_title": "WNDWJ"
     },
     "content_scripts": [{
-        "matches": ["http://forum.xitek.com/thread*.html"],
+        "matches": ["http://forum.xitek.com/*"],
         "js": ["jquery-1.9.1.min.js","main.js"],
         "run_at": "document_idle"
     }]
